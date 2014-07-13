@@ -25,34 +25,34 @@
 
     <div class="hero-unit">
       <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-
-        <li>Sass</li>
-
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
+      <ul></ul>
       <p>Don't forget to update your readme file!!</p>
     </div>
+
+    <script type="text/template" id="vid_stream">
+        <% all.each( function(Video) { %>
+            <li class="videos">
+                <iframe src="http://player.vimeo.com/video/<%=Video.get('id')%>?api=1" width="400" height="225"></iframe>
+                </iframe>
+            </li>
+            <li class="video_info">
+                <%=Video.get('title')%>
+            </li>
+        <% }); %>
+    </script> 
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        
+        <script src="scripts/model.js"></script>
+        <script src="scripts/views.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

@@ -4,7 +4,7 @@ var videoView = Backbone.View.extend({
 		return _.template($('#vid_stream').html());
 	},
 
-	el: $('.hero-unit ul'),
+	el: $('#hero-unit ul'),
 
 	initialize: function(){
 		this.render(); 
